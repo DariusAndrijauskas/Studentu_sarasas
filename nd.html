@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(243, 244, 246, 1);
+            margin: 10px;
+        }
+
+        form:first-child {
+            min-width: 330px;
+            display: flex;
+            column-gap: 10px;
+        }
+
+        form:nth-child(2) {
+            margin-bottom: 20px;
+        }
+
+        .labels {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            text-align: right;
+            height: 21px;
+        }
+
+        p {
+            margin-top: 3px;
+            margin-bottom: 0;
+        }
+
+        input[type=range] {
+            height: 21px;
+            width: 177px;
+            margin: 0;
+        }
+
+        input[type=submit] {
+            margin-top: 10px;
+        }
+
+        .radio-labels {
+            margin: 0;
+        }
+
+        .boksai {
+            display: flex;
+        }
+    </Style>
+</head>
+
+<body>
+    <form>
+        <div class="labels">
+
+            <label for="vardas">Vardas: </label>
+            <label for="pavarde">Pavarde: </label>
+            <label for="amzius">Amžius: </label>
+            <label for="tel">Telefonas: </label>
+            <label for="email">Paštas: </label>
+            <label for="range">IT žinios: </label>
+            <!-- <p>Pasirinkite grupę: </p> -->
+        </div>
+        <div class="inputs">
+            <!-- <input type="text" name="vardas" id="vardas" placeholder="Petras"><br>
+            <input type="text" name="pavarde" id="pavarde" placeholder="Kazlauskas"><br>
+            <input type="number" name="amzius" id="amzius" placeholder="Amzius"><br>
+            <input type="tel" name="tel" id="tel" placeholder="Tel.Nr."><br>
+            <input type="email" name="email" id="email" placeholder="mail@mail.com"><br>
+            <input type="range" name="itbalas" id="itbalas" min="1" max="10" value="1" step="1"
+                oninput="output.value=this.value">
+            <output name="output" id="itbalasoutput">1</output> -->
+            <input class="required" type="text" name="vardas" id="vardas" placeholder="Petras" value="Jonas"><br>
+            <input class="required" type="text" name="pavarde" id="pavarde" placeholder="Kazlauskas" value="Kazlauskas"><br>
+            <input class="required" type="number" name="amzius" id="amzius" placeholder="Amzius" value="18"><br>
+            <input class="required" type="tel" name="tel" id="tel" placeholder="Tel.Nr." value="370645678945"><br>
+            <input class="required" type="text" name="email" id="email" placeholder="mail@mail.com" value="mail@gmail.com"><br>
+            <input class="required" type="range" name="itbalas" id="itbalas" min="1" max="10" value="1" step="1" oninput="output.value=this.value">
+            <output name="output" id="itbalasoutput">1</output>
+            <div class="boksai">
+                <div class="radio-labels">
+                    <fieldset style="background-color: white">
+                        <legend>Grupė:</legend>
+                        <input type="radio" name="grupe" id="radio1" value="1">
+                        <label for="radio1" class="radio">TYPE 1</label><br>
+                        <input type="radio" name="grupe" id="radio2" value="2">
+                        <label for="radio2" class="radio">TYPE 2</label><br>
+                        <input type="radio" name="grupe" id="radio3" value="3" checked>
+                        <label for="radio3" class="radio">TYPE 3</label><br>
+                        <input type="radio" name="grupe" id="radio4" value="4">
+                        <label for="radio4" class="radio">TYPE 4</label><br>
+                        <input type="radio" name="grupe" id="radio5" value="5">
+                        <label for="radio5" class="radio">TYPE 5</label><br>
+                        <input type="radio" name="grupe" id="radio6" value="6">
+                        <label for="radio6" class="radio">TYPE 6</label><br>
+                        <input type="radio" name="grupe" id="radio7" value="7">
+                        <label for="radio7" class="radio">TYPE 7</label><br>
+                        <input type="radio" name="grupe" id="radio8" value="8">
+                        <label for="radio8" class="radio">TYPE 8</label><br>
+                        <input type="radio" name="grupe" id="radio9" value="9">
+                        <label for="radio9" class="radio">TYPE 9</label><br>
+                        <input type="radio" name="grupe" id="radio10" value="10">
+                        <label for="radio10" class="radio">TYPE 10</label><br>
+                    </fieldset>
+                </div>
+                <div class="checkboksai">
+                    <fieldset name="checkboksai" style="background-color: white">
+                        <legend>Kalbos:</legend>
+                        <input type="checkbox" name="kalbos" id="box0">
+                        <label for="box0" class="checkbox">HTML</label><br>
+                        <input type="checkbox" name="kalbos" id="box1">
+                        <label for="box1" class="checkbox">CSS</label><br>
+                        <input type="checkbox" name="kalbos" id="box2">
+                        <label for="box2" class="checkbox">JavaScript</label><br>
+                        <input type="checkbox" name="kalbos" id="box3">
+                        <label for="box3" class="checkbox">React.js</label><br>
+                        <input type="checkbox" name="kalbos" id="box4">
+                        <label for="box4" class="checkbox">Node.js</label><br>
+                        <input type="checkbox" name="kalbos" id="box5">
+                        <label for="box5" class="checkbox">TypeScript</label><br>
+                        <input type="checkbox" name="kalbos" id="box6">
+                        <label for="box6" class="checkbox">SQL</label><br>
+                        <input type="checkbox" name="kalbos" id="box7">
+                        <label for="box7" class="checkbox">NoSQL</label><br>
+                        <input type="checkbox" name="kalbos" id="box8">
+                        <label for="box8" class="checkbox">PHP</label><br>
+                        <input type="checkbox" name="kalbos" id="box9">
+                        <label for="box9" class="checkbox">Python</label><br>
+                    </fieldset>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <form>
+        <label style="margin-right: 10px;" for="filtras">Filter for:</label>
+        <input type="text" name="filtras" id="filtras">
+        <input type="submit" value="Filter"><br>
+        <label style="margin-left:23px; margin-right: 10px;" for="kategorija">pagal:</label>
+        <select style="width:177px;" name="kategorija" id="kategorija">
+            <option value="all">--All--</option>
+            <option value="vardas">vardą</option>
+            <option value="pavarde">pavardę</option>
+            <option value="amzius">amžių</option>
+            <option value="telefonas">telefoną</option>
+            <option value="elpastas">el-paštą</option>
+            <option value="itlygis">IT lygį</option>
+            <option value="grupe">grupę</option>
+            <option value="kalbos">kalbas</option>
+        </select>
+        <input type="button" value="Clear">
+    </form>
+    <div id="students-list"></div>
+    <script>
+        // 1. Sukurti kontaktų formą. Ją pridavus (submit):
+        // 1.1. Kontaktų forma turi išsivalyti.
+        // 2. Žemiau kontaktų formos turi būtų atvaizduoti visi duomenys, pvz. „Amžius: 25m.".
+        // 3. Kontaktų formoje turi būti šie laukeliai:
+        //  3.1. Tekstinis laukelis vardui (privalomas).
+        //  3.2. Tekstinis laukelis pavardei (privalomas).
+        //  3.3. Skaičiaus laukelis amžiui (privalomas).
+        //  3.4. Laukelis įvesti telefono numerį (neprivalomas).
+        //  3.5. Laukelis įvesti el. paštą (privalomas).
+        //  3.6. Range tipo laukelis, kuris skirtas įvertinti savo IT žinias nuo 1 iki 10. Galimas vertinimas tik sveikiems skaičiams.
+        //  3.7. Radio tipo laukeliai, kuriuose pasirenkamas grupės numeris. Turi būti galimybė pasirinkti kalbos nuo TYPE 1gr. iki TYPE 10gr.
+        // 4. Šalia kiekvieno įvesties (input) elemento, pridėti label elementą, kuris žymi laukelio pavadinimą.
+        // ANTRA DALIS:
+        // 1. Sukurti div elementą, kuris turės id „students-list".
+        // 2. Kiekvieną kartą pridavus formą (submit), turi būti sukurtas naujas div elementas su klase „student-item" ir pridedamas į „students-list" elemento pradžią.
+        // 3. Duomenys apie studentą turi būti įdėti į „student-item" elementą.
+        // 4. Formoje pridėti „checkbox" tipo input'ą, kuriame pateikta galimybę rinktis iš dominančių programavimo kalbų.
+        // 5. Dominančias programavimo kalbas atvaizduoti „student-item" elemente.
+        // 6. Sukūrus studentą, turi iššokti <span> elementas, kuris informuoja apie studento sukūrimą: „Sukurtas studentas (Vardas Pavardė)". Šis span elementas dingsta po 5 sekundžių.
+        // TREČIA DALIS:
+        // 1. Vietoje asmens duomenų (el. paštas ir tel. nr) rodyti tik žvaigždutes „****".
+        // 2. Kiekviename „student-item" elemente sukurti mygtuką „Rodyti asmens duomenis".
+        // 3. Paspaudus šį mygtuką:
+        // 3.1. Parodyti to studento el. paštą ir tel. nr.
+        // 3.2. Pakeist mygtuko tekstą į „Slėpti asmens duomenis".
+        // 4. Jeigu asmens duomenys yra rodomi, tai paspaudus mygtuką:
+        // 4.1. Paslėpti asmens duomenis.
+        // 4.2. Mygtuko tekstą pakeisti į „Rodyti asmens duomenis".
+
+        // KETVIRTA UŽDUOTIS (formos validacija naudojant JavaScript):
+        // 1. Priduodant formą (submit) patikrinti ar privalomi laukeliai nėra tušti.
+        // 2. Jeigu bent vienas privalomas formos laukelis yra tuščias:
+        // 2.1. Formos alert žinutėje reikia parašyti, jog ne visi laukeliai yra užpildyti. Šis tekstas turi būti raudonos spalvos.
+        // 2.2. Kiekvienas privalomas input laukelis, kuris nėra užpildytas:
+        // 2.2.1. Turi būti apvestas raudonu rėmeliu.
+        // 2.2.2. Šalia laukelio turi būti parašytas raudonas tekstas: „Šis laukelis yra privalomas".
+
+        // PENKTA UŽDUOTIS (studento ištrynimas):
+        // 1. Prie kiekvieno sukurti studento elemento pridėti mygtuką „Ištrinti studentą".
+        // 2. Paspaudus šį mygtuką, studento elementas yra ištrinamas.
+        // 3. Ištrynus studentą, turi iššokti <span> elementas, kuris informuoja apie studento ištrynimą: „Studentas (Vardas Pavardė) sėkmingai ištrintas.". Šis span elementas dingsta po 5 sekundžių.
+
+        // ŠEŠTA UŽDUOTIS:
+        // 1. Sukurti pradinius duomenų masyvą, kuriame būtų bent 5 studentų duomenys (objektų formatu).
+        // 2. Sukurti funkciją, kuri priima šiuos duomenis ir užkrovus puslapį į ekraną iškart išveda duomenis iš šio masyvo.
+
+        // PAPILDOMA UŽDUOTIS (formos validacija naudojant JavaScript):
+        // Papildyti formos validaciją. Jeigu:
+        // 1. Vardas yra trumpesnis nei 3 simboliai, parašyti: „Vardas privalo būti bent 3 simbolių ilgumo".
+        // 2. Pavardė yra trumpesnė nei 3 simboliai, parašyti: „Pavardė privalo būti bent 3 simbolių ilgumo".
+        // 3. Amžius yra neigamas, parašyti: „Amžius privalo būti teigiamas skaičius".
+        // 4. Amžius yra daugiau nei 120 metų, parašyti: „Įvestas amžius yra per didelis".
+        // 5. Telefono numeris yra mažiau nei 9 arba daugiau nei 12, parašyti: „Įvestas telefono numeris yra neteisingas".
+        // 6. Elektroninis paštas yra trumpesnis nei 5 simboliai arba jame nėra panaudotas @ simbolis, parašyti: „Įvestas elektroninis paštas yra neteisingas".
+        // SEPTINTA UŽDUOTIS:
+        // 1. Prie kiekvieno studento pridėti mygtuką, kurį paspaudus leistų redaguoti studento duomenis.
+        // 2. Redaguojant studentą, submit mygtuko tekstas turėtų pasikeisti į „Save Changes".
+        // 3. Pakeitus studento duomenis, turi iššokti <span> elementas, kuris informuoja apie studento duomenų redagavimą: „Studento (Vardas Pavardė) duomenys sėkmingai pakeisti". Šis span elementas dingsta po 5 sekundžių.
+        console.log('......');
+        // AŠTUNTA UŽDUOTIS (filtravimas):
+        // 1. HTML faile sukurti naują form'ą. Joje pridėti šiuos input elementus: text ir submit.
+        // 2. Formos submit event'o metu, gauti įvestą tekstą ir:
+        // 2.1. Patikrinti ar studentų sąraše yra studentas, kurio varde arba pavardėje yra įvestas tekstas.
+        // 2.2. Ekrane atvaizduoti tik tuos studentus, kurie tenkina sąlygą.
+        let form1 = document.forms[0];
+        let form2 = document.forms[1];
+        let kalbosList = ['HTML', 'CSS', 'JavaScript', 'React.js', 'Node.js', 'TypeScript', 'SQL', 'NoSQL', 'PHP', 'Python'];
+        let labelTexts = {
+            id: '',
+            vardas: 'Vardas',
+            pavarde: 'Pavardė',
+            amzius: 'Amžius',
+            telefonas: 'Tel.Nr.',
+            elpastas: 'El-paštas',
+            itlygis: 'IT lygis',
+            grupe: 'Grupė',
+            kalbos: 'Kalbos',
+        };
+        if (!localStorage.getItem('studentai')) {
+            localStorage.setItem('studentai', JSON.stringify([{
+                id: 0,
+                vardas: 'Jonas',
+                pavarde: 'Jonaitis',
+                amzius: '15',
+                telefonas: '865123245',
+                elpastas: 'jonas.jonaitis@gmail.com',
+                itlygis: '2',
+                grupe: '3',
+                kalbos: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+            }, {
+                id: 1,
+                vardas: 'Petras',
+                pavarde: 'Petraitis',
+                amzius: '69',
+                telefonas: '863512797',
+                elpastas: 'petras.petraitis@gamil.com',
+                itlygis: '3',
+                grupe: '4',
+                kalbos: [0, 0, 1, 1, 0, 0, 0, 0, 0, 0],
+            }, {
+                id: 2,
+                vardas: 'Tomas',
+                pavarde: 'Tomantas',
+                amzius: '34',
+                telefonas: '869312684',
+                elpastas: 'tomas.tomantas@gmail.com',
+                itlygis: '4',
+                grupe: '5',
+                kalbos: [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+            }, {
+                id: 3,
+                vardas: 'Bronius',
+                pavarde: 'Bružinskas',
+                amzius: '89',
+                telefonas: '867445931',
+                elpastas: 'bronius.bruzinskas@gmail.com',
+                itlygis: '5',
+                grupe: '6',
+                kalbos: [0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+            }, {
+                id: 4,
+                vardas: 'Lopas',
+                pavarde: 'Pelėda',
+                amzius: '9',
+                telefonas: '868234641',
+                elpastas: 'lopas.peleda@gmail.com',
+                itlygis: '6',
+                grupe: '7',
+                kalbos: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
+            }]));
+        }
+        let studentai = JSON.parse(localStorage.getItem('studentai'));
+        let state = {
+            edit: false,
+            number: NaN,
+        }
+        let btnSubmit = document.querySelector('input[type=submit]');
+
+        function alertas(text) {
+            let span = document.createElement('span');
+            let fonas = document.createElement('div');
+            span.textContent = text;
+            document.body.append(fonas);
+            fonas.append(span);
+            fonas.style = `position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.6);`;
+            span.style = `
+                background-color: white;
+                padding: 100px;
+                border-radius: 10px;
+                text-content: text;`;
+            fonas.addEventListener('click', e => e.target.remove());
+        }
+
+        function fieldMarkup(field, text) {
+            let span = document.createElement('span');
+            span.textContent = text;
+            span.classList.add('erroras');
+            span.style.color = 'red';
+            field.style.border = '2px solid red';
+            field.after(span);
+        };
+
+        function validation(e, studentas) {
+            let error = false;
+            e.target.querySelectorAll('.erroras').forEach(e => {
+                e.previousSibling.style.border = '';
+                e.remove();
+            });
+            if (studentas.vardas.length < 3) {
+                fieldMarkup(e.target.elements.vardas, "Min 3 simboliai");
+                error = true;
+            }
+            if (studentas.amzius < 0) {
+                fieldMarkup(e.target.elements.amzius, "Amžius privalo būti teigiamas skaičius");
+                error = true;
+            }
+            if (120 < studentas.amzius) {
+                fieldMarkup(e.target.elements.amzius, "Įvestas amžius yra perdidelis");
+                error = true;
+            }
+            if (studentas.telefonas.length < 9 ||
+                12 < studentas.telefonas.length) {
+                fieldMarkup(e.target.elements.tel, "Įvestas telefonas yra neteisingas");
+                error = true;
+            }
+            if (studentas.pavarde.length < 3) {
+                fieldMarkup(e.target.elements.pavarde, "Pavardė privalo būti bent 3 simbolių ilgumo");
+                error = true;
+            }
+            if (studentas.elpastas.length < 5 || !studentas.elpastas.includes('@') || !studentas.elpastas.includes('.')) {
+                fieldMarkup(e.target.elements.email, "Įvestas elektroninis paštas yra neteisingas");
+                error = true;
+            }
+            form1.querySelectorAll('.required').forEach(inputas => {
+                if (!inputas.value) {
+                    while (inputas.nextSibling.classList.contains('erroras')) {
+                        inputas.nextSibling.remove();
+                    };
+                    inputas.parentElement.querySelectorAll('p');
+                    fieldMarkup(inputas, 'Laukelis privalomas');
+                    error = true;
+                }
+            });
+            if (error) {
+                alertas('Patikrinkite formos laukelius');
+                return false;
+            }
+            return true;
+        }
+
+        function createStudentCard(studentas) {
+            let ul = document.createElement('ul');
+            let div = document.createElement('div');
+            let btnSlepti = document.createElement('button');
+            let btnIstrinti = document.createElement('button');
+            let btnEdit = document.createElement('button');
+            div.classList.add('student-item');
+            document.querySelector('#students-list').append(div);
+            div.append(ul);
+            div.append(btnSlepti, btnEdit, btnIstrinti);
+            div.style = `
+                background-color: white;
+                width: 450px;
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+                `;
+            for (const key in studentas) {
+                let li = document.createElement('li')
+                let span1 = document.createElement('span');
+                let span2 = document.createElement('span');
+                span1.classList.add(key);
+                span2.classList.add(key);
+                span1.textContent = labelTexts[key] + ': ';
+                span2.textContent = studentas[key];
+                li.append(span1, span2);
+                ul.append(li);
+            }
+            ul.lastChild.lastChild.textContent = kalbosList.filter((e, i) => studentas.kalbos[i]).join(', ');
+            let zvaigzdutes = '*******';
+            ul.children[4].children[1].textContent = zvaigzdutes;
+            ul.children[5].children[1].textContent = zvaigzdutes;
+            btnSlepti.textContent = 'Rodyti';
+            btnSlepti.setAttribute('paslepta', '0');
+            btnSlepti.addEventListener('click', e => {
+                if (btnSlepti.attributes.paslepta.value === '0') {
+                    ul.children[4].children[1].textContent = studentas.telefonas;
+                    ul.children[5].children[1].textContent = studentas.elpastas;
+                    btnSlepti.textContent = 'Slėpti';
+                    btnSlepti.setAttribute('paslepta', '1');
+                } else {
+                    ul.children[4].children[1].textContent = zvaigzdutes;
+                    ul.children[5].children[1].textContent = zvaigzdutes;
+                    btnSlepti.textContent = 'Rodyti';
+                    btnSlepti.setAttribute('paslepta', '0');
+                }
+            });
+            btnEdit.textContent = 'Keisti';
+            btnEdit.addEventListener('click', e => {
+                let inputs = document.querySelectorAll('.required');
+                inputs[0].value = studentas.vardas;
+                inputs[1].value = studentas.pavarde;
+                inputs[2].value = studentas.amzius;
+                inputs[3].value = studentas.telefonas;
+                inputs[4].value = studentas.elpastas;
+                inputs[5].value = studentas.itlygis;
+                inputs[5].nextElementSibling.value = studentas.itlygis;
+                document.querySelectorAll('input[type=radio]')[studentas.grupe - 1].checked = true;
+                document.querySelectorAll('input[name=kalbos]').forEach((e, i) => e.checked = studentas.kalbos[i]);
+                state.edit = true;
+                localStudent = studentas;
+                localStorage.setItem('localStudent', JSON.stringify(studentas));
+                btnSubmit.value = 'Update';
+            });
+            btnIstrinti.textContent = 'Ištrinti';
+            btnIstrinti.addEventListener('click', e => {
+                // alertas(`Studentas "${studentas.vardas} ${studentas.pavarde}" sėkmingai ištrintas.`);
+                e.target.parentElement.remove();
+                studentai = JSON.parse(localStorage.getItem('studentai'));
+                studentai = studentai.filter(e => e.id != studentas.id);
+                localStorage.setItem('studentai', JSON.stringify(studentai));
+            });
+        };
+
+        // function createStudentObject() {
+        //     let studentas = {
+        //         id: localStudent.id,
+        //         vardas: localStudent.vardas,
+        //         pavarde: localStudent.pavarde,
+        //         amzius: localStudent.amzius,
+        //         telefonas: localStudent.telefonas,
+        //         elpastas: localStudent.elpastas,
+        //         itlygis: localStudent.itlygis,
+        //         grupe: localStudent.grupe,
+        //         kalbos: localStudent.kalbos,
+        //     }
+        //     return studentas;
+        // }
+
+        function redraw(array) {
+            document.querySelectorAll('.student-item').forEach(e => e.remove());
+            array.map((studentas) => createStudentCard(studentas));
+        }
+
+        function nextID() {
+            let studentai = JSON.parse(localStorage.getItem('studentai'));
+            let max = 0;
+            studentai.forEach((a) => {
+                max = a.id > max ? a.id : max;
+            })
+            return max + 1;
+        }
+
+        function filter(e) {
+            e.preventDefault();
+            let filtras = form2.querySelector('input').value.toLowerCase();
+            let select = form2.querySelector('select').value;
+            let keys = Object.keys(labelTexts);
+            let filteredList = [];
+            switch (select) {
+                case 'all':
+                    filteredList = studentai.filter(studentas => {
+                        let studentoKalbosString = kalbosList.filter((e, i) => studentas[keys[7]][i]).join().toLowerCase();
+                        if (studentoKalbosString.includes(filtras)) return true;
+                        for (const key in studentas) {
+                            if ((studentas[key] + '').toLowerCase().includes(filtras)) return true;
+                        }
+                    });
+                    break;
+                case keys[0]:
+                case keys[1]:
+                case keys[2]:
+                case keys[3]:
+                case keys[4]:
+                case keys[5]:
+                case keys[6]:
+                    filteredList = studentai.filter(studentas => (studentas[select] + '').toLowerCase().includes(filtras));
+                    break;
+                case keys[7]:
+                    let studentuKalbos = studentai.map((studentas, j) => kalbosList.filter((e, i) => studentas[select][i]).join().toLowerCase());
+                    filteredList = studentai.filter((studentas, i) => studentuKalbos[i].includes(filtras));
+                    break;
+            }
+            redraw(filteredList);
+        }
+        redraw(studentai);
+        let localStudent = {};
+        if (!localStorage.getItem('localStudent')) {
+            localStudent = {
+                id: nextID(),
+                vardas: form1[0].value,
+                pavarde: form1[1].value,
+                amzius: form1[2].value,
+                telefonas: form1[3].value,
+                elpastas: form1[4].value,
+                itlygis: form1[5].value,
+                grupe: form1.elements.grupe.value,
+                kalbos: [...form1.elements.checkboksai.elements].map(e => e.checked ? 1 : 0),
+            }
+            localStorage.setItem('localStudent', JSON.stringify(localStudent));
+        } else {
+            localStudent = JSON.parse(localStorage.getItem('localStudent'));
+        }
+        form1[0].value = localStudent.vardas;
+        form1[1].value = localStudent.pavarde;
+        form1[2].value = localStudent.amzius;
+        form1[3].value = localStudent.telefonas;
+        form1[4].value = localStudent.elpastas;
+        form1[5].value = localStudent.itlygis;
+        form1.elements.grupe.value = localStudent.grupe;
+        document.querySelectorAll('input[name=kalbos]').forEach((e, i) => e.checked = localStudent.kalbos[i]);
+
+        form1.addEventListener('submit', e => {
+            e.preventDefault();
+            if (state.edit) {
+                if (validation(e, localStudent)) {
+                    let iD = 0;
+                    studentai.forEach((studentas, i) => {
+                        studentas.id == localStudent.id && (iD = i)
+                    })
+                    console.log(iD);
+                    studentai[iD] = localStudent;
+                    localStorage.setItem('studentai', JSON.stringify(studentai));
+                    redraw(studentai);
+                    form1.reset();
+                    localStudent = {
+                        id: nextID(),
+                        vardas: form1[0].value,
+                        pavarde: form1[1].value,
+                        amzius: form1[2].value,
+                        telefonas: form1[3].value,
+                        elpastas: form1[4].value,
+                        itlygis: form1[5].value,
+                        grupe: form1.elements.grupe.value,
+                        kalbos: [...form1.elements.checkboksai.elements].map(e => e.checked ? 1 : 0),
+                    }
+                    localStorage.setItem('localStudent', JSON.stringify(localStudent));
+                    btnSubmit.value = 'Submit';
+                    state.edit = false;
+                    // alertas(`Studentas "${studentas.vardas} ${studentas.pavarde}" sėkmingai atnaujintas.`);
+                }
+            } else {
+                if (validation(e, localStudent)) {
+                    localStudent.id = nextID();
+                    console.log(nextID());
+                    studentai = JSON.parse(localStorage.getItem('studentai'));
+                    studentai.push(localStudent);
+                    // studentai[localStudent.id] = localStudent;
+                    localStorage.setItem('studentai', JSON.stringify(studentai));
+                    redraw(studentai);
+                    // alertas(`Sukurtas studentas "${studentas.vardas} ${studentas.pavarde}"`);
+                    form1.reset();
+                    localStudent = {
+                        id: nextID(),
+                        vardas: form1[0].value,
+                        pavarde: form1[1].value,
+                        amzius: form1[2].value,
+                        telefonas: form1[3].value,
+                        elpastas: form1[4].value,
+                        itlygis: form1[5].value,
+                        grupe: form1.elements.grupe.value,
+                        kalbos: [...form1.elements.checkboksai.elements].map(e => e.checked ? 1 : 0),
+                    }
+                    localStorage.setItem('localStudent', JSON.stringify(localStudent));
+                };
+            }
+        });
+        form2.addEventListener('submit', e => filter(e));
+        form2[0].addEventListener('input', e => {
+            filter(e)
+        });
+        form2[3].addEventListener('click', e => {
+            form2[0].value = '';
+            form2[2][0].selected = true;
+            redraw(studentai);
+        });
+        localStorage.setItem('studentai', JSON.stringify(studentai));
+        form1.addEventListener('input', e => {
+            localStudent.vardas = form1[0].value;
+            localStudent.pavarde = form1[1].value;
+            localStudent.amzius = form1[2].value;
+            localStudent.telefonas = form1[3].value;
+            localStudent.elpastas = form1[4].value;
+            localStudent.itlygis = form1[5].value;
+            localStudent.grupe = form1.elements.grupe.value;
+            localStudent.kalbos = [...form1.elements.checkboksai.elements].map(e => e.checked ? 1 : 0);
+            localStorage.setItem('localStudent', JSON.stringify(localStudent));
+        });
+    </script>
+</body>
+
+</html>
