@@ -411,6 +411,7 @@
                 li.append(span1, span2);
                 ul.append(li);
             }
+            ul.firstChild.remove();
             ul.lastChild.lastChild.textContent = kalbosList.filter((e, i) => studentas.kalbos[i]).join(', ');
             let zvaigzdutes = '*******';
             ul.children[4].children[1].textContent = zvaigzdutes;
