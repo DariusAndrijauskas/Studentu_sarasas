@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <title>Document</title>
     <Style>
         * {
@@ -26,14 +29,21 @@
             margin-bottom: 20px;
         }
 
-        .labels {
+        div.labels {
             display: flex;
             flex-direction: column;
+            padding-top: 7px;
+        }
+
+        div.labels label {
+            margin-bottom: 32px;
         }
 
         label {
+            display: inline-block;
             text-align: right;
             height: 21px;
+            
         }
 
         p {
@@ -41,18 +51,82 @@
             margin-bottom: 0;
         }
 
-        input[type=range] {
-            height: 21px;
-            width: 177px;
+        body form input.required {
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+
+        }
+
+        body form input[type=range] {
+            color: white;
+            height: 40px;
+            width: 230px;
             margin: 0;
+            box-shadow: none;
+
+            
+        }
+
+        output#itbalasoutput {
+            position: absolute;
+            left: 335px;
+            top: 283px;
+        }
+
+        input#filtras {
+            background-color: white;
+            width: 200px;
+        }
+
+        select#kategorija {
+            width: 200px;
+            background-color: white;
+        }
+
+        fieldset {
+
+            border-radius: 10px;
+            padding: 0 15px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
         }
 
         input[type=submit] {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
             margin-top: 10px;
+        }
+
+        input[type=button],
+        button {
+
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+        }
+
+        .student-item {
+            background-color: white;
+            width: 393px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+        }
+
+        div#students-list {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 15px;
+        }
+
+        .student-item button {
+            margin-right: 15px;
+            margin-bottom: 0;
+        }
+
+        .student-item button:last-child {
+            margin-right: 0;
         }
 
         .radio-labels {
             margin: 0;
+            margin-right: 10px;
         }
 
         .boksai {
@@ -149,7 +223,7 @@
         <input type="text" name="filtras" id="filtras">
         <input type="submit" value="Filter"><br>
         <label style="margin-left:23px; margin-right: 10px;" for="kategorija">pagal:</label>
-        <select style="width:177px;" name="kategorija" id="kategorija">
+        <select name="kategorija" id="kategorija">
             <option value="all">--All--</option>
             <option value="vardas">vardą</option>
             <option value="pavarde">pavardę</option>
@@ -392,14 +466,6 @@
             document.querySelector('#students-list').append(div);
             div.append(ul);
             div.append(btnSlepti, btnEdit, btnIstrinti);
-            div.style = `
-                background-color: white;
-                width: 450px;
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 20px;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
-                `;
             for (const key in studentas) {
                 let li = document.createElement('li')
                 let span1 = document.createElement('span');
